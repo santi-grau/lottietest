@@ -18,7 +18,8 @@ module.exports = function(grunt) {
           dot: true,
           cwd: "app",
           src: [
-            "img/**/*"
+            "img/**/*",
+            "images/**/*"
           ],
           dest: "docs"
         }]
