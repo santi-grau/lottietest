@@ -1,0 +1,44 @@
+{
+  "name": "Lottie",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git"
+  },
+  "description": "Iceberg gen",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt build && mkdir -p docs/js && ./node_modules/browserify/bin/cmd.js  -t [ stringify --extensions [.obj .svg .glsl .fs .vs] ]  app/js/main.js | uglifyjs --compress --mangle -- > docs/js/main.js",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "lct",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bodymovin": "^4.13.0",
+    "browserify": "*",
+    "browserify-middleware": "*",
+    "express": "*",
+    "lottie-web": "^5.1.7",
+    "nib": "*",
+    "pug": "*",
+    "request": "^2.83.0",
+    "stringify": "*",
+    "stylus": "*"
+  },
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "uglify-js": "^3.0.15",
+    "figlet": "*"
+  },
+  "engines": {
+    "node": "6.2.0"
+  }
+}
